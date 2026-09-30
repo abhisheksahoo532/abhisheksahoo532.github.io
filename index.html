@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhishek Sahoo — Radiation Biology &amp; Epigenomics</title>
+<meta name="description" content="Abhishek Sahoo, M.S. — biomedical scientist working on radiation epigenomics, stem cell therapeutics, and nanoparticle-based targeted alpha therapy. UT–ORNL Bredesen Center. 7 peer-reviewed publications.">
+<meta name="author" content="Abhishek Sahoo">
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="Abhishek Sahoo — Radiation Biology &amp; Epigenomics">
+<meta property="og:description" content="Biomedical scientist: radiation epigenomics, GMP stem cell therapeutics, targeted alpha therapy. 7 peer-reviewed publications.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abhisheksahoo.com">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://abhisheksahoo.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Favicon: simple DNA-ish glyph, no external file needed -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+
+<style>
+:root{
+  --bg:#ffffff; --bg-alt:#f7f8fa; --fg:#12151a; --fg-muted:#5a6472;
+  --border:#e5e8ee; --accent:#0f766e; --accent-2:#b45309; --accent-soft:#e6f4f1;
+  --radius:14px; --maxw:900px;
+  --shadow:0 1px 2px rgba(16,24,40,.05),0 6px 20px rgba(16,24,40,.06);
+}
+html[data-theme="dark"]{
+  --bg:#0c1013; --bg-alt:#141a1f; --fg:#e8ecf1; --fg-muted:#98a3b0;
+  --border:#232b33; --accent:#4fd1c5; --accent-2:#f0b429; --accent-soft:#122c2a;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:70px}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:16.5px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  transition:background .25s ease,color .25s ease;
+}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{line-height:1.25; letter-spacing:-.02em; margin:0}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px}
+
+/* ---------- NAV ---------- */
+header.nav{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:saturate(180%) blur(12px);
+  background:color-mix(in srgb,var(--bg) 84%,transparent);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; height:60px}
+.brand{font-weight:700; letter-spacing:-.03em; color:var(--fg); font-size:1.02rem}
+.nav-links{display:flex; gap:22px; align-items:center}
+.nav-links a{color:var(--fg-muted); font-size:.9rem; font-weight:500}
+.nav-links a:hover{color:var(--fg); text-decoration:none}
+.toggle{
+  background:transparent; border:1px solid var(--border); color:var(--fg-muted);
+  width:34px; height:34px; border-radius:9px; cursor:pointer;
+  display:grid; place-items:center; font-size:15px; transition:.2s;
+}
+.toggle:hover{border-color:var(--accent); color:var(--accent)}
+@media(max-width:760px){ .nav-links a{display:none} }
+
+/* ---------- HERO ---------- */
+.hero{padding:72px 0 50px}
+.eyebrow{
+  display:inline-block; font-size:.74rem; font-weight:600; letter-spacing:.09em;
+  text-transform:uppercase; color:var(--accent);
+  background:var(--accent-soft); padding:5px 12px; border-radius:99px; margin-bottom:20px;
+}
+.hero h1{font-size:clamp(2.1rem,6vw,3.05rem); font-weight:700; margin-bottom:6px}
+.hero .role{
+  font-family:Newsreader,Georgia,serif; font-style:italic;
+  font-size:1.15rem; color:var(--fg-muted); margin:0 0 18px;
+}
+.hero .lede{font-size:1.06rem; color:var(--fg-muted); max-width:64ch; margin:0}
+.cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:28px}
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:10px 18px; border-radius:10px; font-size:.92rem; font-weight:600;
+  border:1px solid var(--border); color:var(--fg); transition:.2s; background:var(--bg);
+}
+.btn:hover{text-decoration:none; transform:translateY(-1px); box-shadow:var(--shadow)}
+.btn.primary{background:var(--accent); border-color:var(--accent); color:#fff}
+html[data-theme="dark"] .btn.primary{color:#07201e}
+.btn.primary:hover{opacity:.92}
+
+/* ---------- STAT STRIP ---------- */
+.stats{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:38px}
+.stat{background:var(--bg-alt); border:1px solid var(--border); border-radius:12px; padding:16px 14px}
+.stat b{display:block; font-size:1.5rem; font-weight:700; letter-spacing:-.03em}
+.stat span{font-size:.78rem; color:var(--fg-muted); line-height:1.35; display:block; margin-top:2px}
+@media(max-width:620px){ .stats{grid-template-columns:repeat(2,1fr)} }
+
+/* ---------- SECTIONS ---------- */
+section{padding:48px 0; border-top:1px solid var(--border)}
+.sec-title{
+  font-size:.76rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--fg-muted); margin:0 0 26px;
+}
+.prose{margin:0 0 14px; color:var(--fg-muted)}
+.prose strong{color:var(--fg); font-weight:600}
+
+/* ---------- RESEARCH CARDS ---------- */
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(262px,1fr)); gap:18px}
+.card{
+  background:var(--bg-alt); border:1px solid var(--border);
+  border-radius:var(--radius); padding:22px; transition:.22s;
+}
+.card:hover{transform:translateY(-3px); box-shadow:var(--shadow); border-color:var(--accent)}
+.card .ico{font-size:1.35rem; line-height:1; margin-bottom:12px; display:block}
+.card h3{font-size:1.01rem; font-weight:650; margin-bottom:8px}
+.card p{margin:0 0 14px; font-size:.92rem; color:var(--fg-muted)}
+.tags{display:flex; flex-wrap:wrap; gap:6px}
+.tag{
+  font-family:"JetBrains Mono",ui-monospace,monospace; font-size:.69rem;
+  padding:3px 8px; border-radius:6px; background:var(--accent-soft);
+  color:var(--accent); font-weight:500;
+}
+
+/* ---------- TIMELINE ---------- */
+.item{display:grid; grid-template-columns:142px 1fr; gap:24px; margin-bottom:34px}
+.item:last-child{margin-bottom:0}
+.item .when{font-size:.83rem; color:var(--fg-muted); font-variant-numeric:tabular-nums; padding-top:3px}
+.item h3{font-size:1.03rem; font-weight:650; margin-bottom:2px}
+.item .org{font-size:.9rem; color:var(--fg-muted); margin-bottom:10px}
+.item .org em{font-style:normal; opacity:.75}
+.item ul{margin:0; padding-left:18px; color:var(--fg-muted); font-size:.93rem}
+.item ul li{margin-bottom:5px}
+.item ul li::marker{color:var(--accent)}
+@media(max-width:700px){
+  .item{grid-template-columns:1fr; gap:6px}
+  .item .when{order:-1; font-weight:600; color:var(--accent)}
+}
+
+/* ---------- PUBLICATIONS ---------- */
+.pub{padding:15px 0; border-bottom:1px solid var(--border); font-size:.93rem}
+.pub:last-child{border-bottom:none}
+.pub .authors{color:var(--fg-muted)}
+.pub .authors .me{color:var(--fg); font-weight:650}
+.pub .ttl{display:block; font-weight:600; margin:3px 0}
+.pub .venue{font-family:Newsreader,Georgia,serif; font-style:italic; color:var(--fg-muted); font-size:.9rem}
+.pub .badge{
+  display:inline-block; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--accent-2); border:1px solid currentColor;
+  padding:1px 6px; border-radius:5px; margin-left:8px; vertical-align:1px;
+}
+
+/* ---------- LISTS (awards / talks / service) ---------- */
+.twocol{display:grid; grid-template-columns:1fr 1fr; gap:14px 34px}
+@media(max-width:700px){ .twocol{grid-template-columns:1fr} }
+.linelist{list-style:none; margin:0; padding:0}
+.linelist li{
+  display:flex; justify-content:space-between; gap:16px; align-items:baseline;
+  padding:9px 0; border-bottom:1px dashed var(--border); font-size:.93rem;
+}
+.linelist li:last-child{border-bottom:none}
+.linelist .date{font-size:.8rem; color:var(--fg-muted); white-space:nowrap; font-variant-numeric:tabular-nums}
+
+/* ---------- SKILLS ---------- */
+.skillrow{display:grid; grid-template-columns:190px 1fr; gap:18px; padding:14px 0; border-bottom:1px solid var(--border)}
+.skillrow:last-child{border-bottom:none}
+.skillrow dt{font-size:.88rem; font-weight:650; color:var(--fg-muted)}
+.skillrow dd{margin:0; font-size:.93rem; display:flex; flex-wrap:wrap; gap:6px}
+.chip{border:1px solid var(--border); background:var(--bg-alt); border-radius:7px; padding:3px 9px; font-size:.82rem}
+@media(max-width:700px){ .skillrow{grid-template-columns:1fr; gap:8px} }
+
+/* ---------- EDUCATION ---------- */
+.edu{display:grid; grid-template-columns:1fr auto; gap:6px 18px; padding:14px 0; border-bottom:1px solid var(--border)}
+.edu:last-child{border-bottom:none}
+.edu .deg{font-weight:600; font-size:.98rem}
+.edu .sch{font-size:.9rem; color:var(--fg-muted)}
+.edu .yr{font-size:.85rem; color:var(--fg-muted); text-align:right; white-space:nowrap}
+
+/* ---------- CONTACT / FOOTER ---------- */
+.contact-box{
+  background:var(--bg-alt); border:1px solid var(--border);
+  border-radius:var(--radius); padding:28px;
+}
+footer{padding:34px 0 60px; border-top:1px solid var(--border); color:var(--fg-muted); font-size:.85rem}
+.social{display:flex; gap:18px; margin-bottom:12px; font-weight:600; flex-wrap:wrap}
+.reveal{opacity:0; transform:translateY(14px); transition:opacity .5s ease,transform .5s ease}
+.reveal.in{opacity:1; transform:none}
+@media(prefers-reduced-motion:reduce){ .reveal{opacity:1; transform:none; transition:none} html{scroll-behavior:auto} }
+@media print{ header.nav,.toggle,.cta-row,.reveal{display:revert!important; opacity:1!important} body{font-size:11pt} }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">Abhishek Sahoo</a>
+    <nav class="nav-links">
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf">CV</a>
+      <button class="toggle" id="themeBtn" aria-label="Toggle dark mode">◐</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <div class="wrap hero">
+    <span class="eyebrow">Open to industry roles · Graduating Dec 2026</span>
+    <h1>Abhishek Sahoo, M.S.</h1>
+    <p class="role">Radiation Biology · Epigenomics · Stem Cell &amp; Cell Therapy</p>
+    <p class="lede">
+      Biomedical scientist at the UT&ndash;ORNL Bredesen Center studying how low-dose ionizing
+      radiation rewrites the chromatin landscape of human lung cells &mdash; and how that
+      knowledge translates into targeted alpha therapy and regenerative cell products.
+      I work end-to-end: wet-lab molecular biology, GMP-grade cell manufacturing, in vivo
+      models, and the computational pipelines that make sense of the data.
+    </p>
+    <div class="cta-row">
+      <a class="btn primary" href="mailto:abhisheksahoo532@gmail.com">Get in touch</a>
+      <a class="btn" href="resume.pdf">Download CV</a>
+      <a class="btn" href="https://scholar.google.com/">Google Scholar</a>
+      <a class="btn" href="https://www.linkedin.com/in/yourprofile">LinkedIn</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>7</b><span>Peer-reviewed publications</span></div>
+      <div class="stat"><b>2</b><span>First / co-first author papers</span></div>
+      <div class="stat"><b>6</b><span>National &amp; institutional awards</span></div>
+      <div class="stat"><b>1</b><span>Clinical trial cell product (NCT04932629)</span></div>
+    </div>
+  </div>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about"><div class="wrap reveal">
+    <p class="sec-title">About</p>
+    <p class="prose">
+      I'm an M.S. candidate in <strong>Genome Science and Technology</strong> at the University of
+      Tennessee &ndash; Oak Ridge National Laboratory Bredesen Center, where I lead an independent
+      project on the <strong>epigenetic consequences of low-dose radiation exposure</strong> in human
+      lung fibroblasts and epithelial cells, profiling H3K27me3, H3K9me3 and H3K27ac by CUT&amp;RUN
+      and integrating the results with RNA-seq and Hi-C.
+    </p>
+    <p class="prose">
+      Before joining UT, I spent two and a half years as a Junior Research Fellow at the
+      <strong>L V Prasad Eye Institute</strong>, where I built the xeno-free expansion protocol for
+      human limbus-derived mesenchymal stem cells, qualified the cell product under
+      <strong>GMP conditions</strong>, and supported patient enrollment for clinical trial
+      <strong>NCT04932629</strong>. That work produced a first-author paper in
+      <em>Stem Cell Research &amp; Therapy</em> and six co-authored articles.
+    </p>
+    <p class="prose" style="margin-bottom:0">
+      What I bring to a biotech team: I can take a therapeutic hypothesis from
+      benchtop molecular assay &rarr; nanoparticle formulation &rarr; in vivo efficacy study &rarr;
+      regulatory-grade documentation, and analyze the genomics myself on HPC rather than
+      handing it off. I'm an invited speaker at the 2026 Gordon Research Seminar and an
+      Outstanding Scholar Awardee of the Radiation Research Society.
+    </p>
+  </div></section>
+
+  <!-- ================= RESEARCH ================= -->
+  <section id="research"><div class="wrap reveal">
+    <p class="sec-title">Research Focus</p>
+    <div class="grid">
+
+      <article class="card">
+        <span class="ico">☢️</span>
+        <h3>Low-Dose Radiation Epigenomics</h3>
+        <p>
+          Mapping how gamma (Cs-137) and alpha (Ac-225) exposure reshapes repressive and active
+          histone marks in lung fibroblasts and epithelial cells, and linking those chromatin
+          changes to fibrotic and EMT transcriptional programs.
+        </p>
+        <div class="tags">
+          <span class="tag">CUT&amp;RUN</span><span class="tag">H3K27me3</span>
+          <span class="tag">H3K9me3</span><span class="tag">H3K27ac</span><span class="tag">RNA-seq</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="ico">🎯</span>
+        <h3>Targeted Alpha Therapy &amp; Nanomedicine</h3>
+        <p>
+          Synthesis and characterization of PLGA nanoparticles encapsulating drugs and
+          radioisotopes, evaluated for anti-cancer efficacy and theranostic delivery &mdash;
+          extending earlier work on hesperetin-loaded silver nanoparticles for neuroblastoma.
+        </p>
+        <div class="tags">
+          <span class="tag">PLGA</span><span class="tag">Ac-225</span>
+          <span class="tag">DLS</span><span class="tag">SEM</span><span class="tag">theranostics</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="ico">🧫</span>
+        <h3>Stem Cell Therapeutics (GMP)</h3>
+        <p>
+          Xeno-free isolation and expansion of human limbus-derived stromal/mesenchymal stem
+          cells, full phenotypic characterization, pre-clinical efficacy in rabbit and mouse
+          corneal wound models, and cell-product qualification for a registered clinical trial.
+        </p>
+        <div class="tags">
+          <span class="tag">hLMSC</span><span class="tag">xeno-free</span>
+          <span class="tag">flow cytometry</span><span class="tag">CFU</span><span class="tag">GMP</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="ico">💻</span>
+        <h3>Computational Genomics</h3>
+        <p>
+          End-to-end pipelines for RNA-seq, CUT&amp;RUN and Hi-C built and run on the ISAAC-NG
+          high-performance computing cluster &mdash; alignment, peak calling, differential
+          expression, and genome-browser-ready track generation.
+        </p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">R</span><span class="tag">DESeq2</span>
+          <span class="tag">deepTools</span><span class="tag">Bowtie2</span><span class="tag">HPC</span>
+        </div>
+      </article>
+
+    </div>
+  </div></section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience"><div class="wrap reveal">
+    <p class="sec-title">Experience</p>
+
+    <div class="item">
+      <div class="when">Aug 2023 — Present</div>
+      <div>
+        <h3>Graduate Research Assistant</h3>
+        <div class="org">UT&ndash;ORNL Bredesen Center <em>· Knoxville, TN</em></div>
+        <ul>
+          <li>Lead an independent project on the molecular and epigenetic consequences of low-dose radiation in human lung fibroblasts and epithelial cells, in collaboration with Oak Ridge National Laboratory.</li>
+          <li>Profile H3K27me3, H3K9me3 and H3K27ac following low-dose exposure using CUT&amp;RUN.</li>
+          <li>Handle Cs-137 and Ac-225 radioisotopes for gamma and alpha irradiation studies.</li>
+          <li>Built computational pipelines for RNA-seq, CUT&amp;RUN and Hi-C on the ISAAC-NG HPC cluster (Python, R, DESeq2, deepTools, Bowtie2).</li>
+          <li>Led synthesis of drug- and radioisotope-encapsulated PLGA nanoparticles for anti-cancer efficacy and targeted alpha therapy.</li>
+          <li>Quantified fibrosis, EMT and DNA-damage phenotypes by confocal immunofluorescence microscopy.</li>
+          <li>Maintain lab data and compliance with OSHA, CDC and NIH BSL-2 guidelines for human cell lines.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="when">Jan 2021 — Jul 2023</div>
+      <div>
+        <h3>Junior Research Fellow</h3>
+        <div class="org">L V Prasad Eye Institute <em>· Hyderabad, India</em></div>
+        <ul>
+          <li>Established culture and expansion of primary mesenchymal stem cells from the human corneal limbus under sterile GMP conditions.</li>
+          <li>Characterized cells in xeno-free media by immunofluorescence, qRT-PCR, flow cytometry, CFU and wound-healing assays.</li>
+          <li>Managed in vivo mouse and rabbit studies assessing pre-clinical efficacy in corneal wound healing.</li>
+          <li>Prepared and qualified the cell product and coordinated patient enrollment for clinical trial <strong>NCT04932629</strong>.</li>
+          <li>Authored 2 and co-authored 5 peer-reviewed articles in international journals.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="when">Jan 2026 — May 2026</div>
+      <div>
+        <h3>Graduate Teaching Assistant</h3>
+        <div class="org">University of Tennessee, Biochemistry &amp; Molecular Biology <em>· Knoxville, TN</em></div>
+        <ul>
+          <li>Led in-class demonstrations on enzyme kinetics, the central dogma, and the cell cycle.</li>
+          <li>Facilitated weekly journal-club discussions on reading and interpreting primary literature.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="when">Oct 2019 — Mar 2020</div>
+      <div>
+        <h3>Master's Dissertation</h3>
+        <div class="org">Pondicherry University <em>· Pondicherry, India</em></div>
+        <ul>
+          <li>Evaluated hesperetin as a candidate therapeutic against neuroblastoma using in silico docking and nano-formulation.</li>
+          <li>Synthesized hesperetin-encapsulated silver nanoparticles and characterized them by DLS.</li>
+          <li>Performed molecular docking (AutoDock, PyMOL) against principal neuroblastoma pathway proteins.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="when">Jun 2019 — Jul 2019</div>
+      <div>
+        <h3>Summer Intern</h3>
+        <div class="org">Institute of Life Sciences <em>· Bhubaneswar, India</em></div>
+        <ul>
+          <li>Cloned the E-cadherin promoter in DH5α cells and assayed the effect of NAE and HER2 overexpression on its activity.</li>
+          <li>Assessed protein expression by western blotting.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div></section>
+
+  <!-- ================= PUBLICATIONS ================= -->
+  <section id="publications"><div class="wrap reveal">
+    <p class="sec-title">Publications</p>
+
+    <div class="pub">
+      <div class="authors"><span class="me">Sahoo, A.</span>, Damala, M., Jaffet, J. et al. <span class="badge">First author</span></div>
+      <a class="ttl" href="https://doi.org/10.1186/s13287-023-03299-3">Expansion and characterization of human limbus-derived stromal/mesenchymal stem cells (hLMSCs) in xeno-free medium for therapeutic applications</a>
+      <span class="venue">Stem Cell Research &amp; Therapy, 14:89 (2023)</span>
+    </div>
+
+    <div class="pub">
+      <div class="authors">Damala, M.; <span class="me">Sahoo, A.</span> et al. <span class="badge">Co-first</span></div>
+      <a class="ttl" href="https://doi.org/10.3390/cells12060876">Pre-clinical evaluation of efficacy and safety of human limbus-derived stromal/mesenchymal stem cells with and without alginate encapsulation for future clinical applications</a>
+      <span class="venue">Cells, 12(6):876 (2023)</span>
+    </div>
+
+    <div class="pub">
+      <div class="authors">Kethiri, A. R.; Kate, A.; Koduri, M. A.; <span class="me">Sahoo, A.</span> et al.</div>
+      <a class="ttl" href="https://doi.org/10.1016/j.exer.2025.110378">Immunological and histopathological changes in alkali burn-induced ocular surface pannus: implication on success vs. failure of SLET</a>
+      <span class="venue">Experimental Eye Research, 255:110378 (2025)</span>
+    </div>
+
+    <div class="pub">
+      <div class="authors">Shankar, S.; Thacker, M.; <span class="me">Sahoo, A.</span> et al.</div>
+      <a class="ttl" href="https://doi.org/10.1016/j.exer.2024.109811">Revisiting rabbit models for keratoconus: a long-term study on collagenase-induced disease progression</a>
+      <span class="venue">Experimental Eye Research, 241:109811 (2024)</span>
+    </div>
+
+    <div class="pub">
+      <div class="authors">Singh, V. K.; Kethiri, A. R.; Pingali, T.; <span class="me">Sahoo, A.</span> et al.</div>
+      <a class="ttl" href="https://doi.org/10.1016/j.exer.2023.109667">Development and validation of a reliable rabbit model of limbal stem cell deficiency by mechanical debridement using an ophthalmic burr</a>
+      <span class="venue">Experimental Eye Research, 236:109667 (2023)</span>
+    </div>
+
+    <div class="pub">
+      <div class="authors">Thacker, M.; <span class="me">Sahoo, A.</span> et al.</div>
+      <a class="ttl" href="https://doi.org/10.4103/IJO.IJO_2791_22">Benzalkonium chloride-induced dry eye disease animal models: current understanding and potential for translational research</a>
+      <span class="venue">Indian Journal of Ophthalmology, 71(4):1256–1262 (2023)</span>
+    </div>
+
+    <div class="pub">
+      <div class="authors">Prasad, D.; Salman, M.; Reddy, A. A.; Jaffet, J.; <span class="me">Sahoo, A.</span> et al.</div>
+      <a class="ttl" href="https://doi.org/10.4103/IJO.IJO_2815_22">A review of rabbit models of meibomian gland dysfunction and scope for translational research</a>
+      <span class="venue">Indian Journal of Ophthalmology, 71(4):1227–1236 (2023)</span>
+    </div>
+  </div></section>
+
+  <!-- ================= AWARDS + TALKS ================= -->
+  <section id="recognition"><div class="wrap reveal">
+    <p class="sec-title">Awards &amp; Invited Talks</p>
+    <div class="twocol">
+      <div>
+        <h3 style="font-size:.95rem; margin-bottom:6px">Awards &amp; Honors</h3>
+        <ul class="linelist">
+          <li><span>Department of Energy Travel Award</span><span class="date">Apr 2026</span></li>
+          <li><span>UTK Graduate Student Senate Travel Award</span><span class="date">Oct 2025</span></li>
+          <li><span>Outstanding Scholar Awardee, Radiation Research Society</span><span class="date">Sep 2025</span></li>
+          <li><span>SIT Travel Award, Radiation Research Society</span><span class="date">Sep 2025</span></li>
+          <li><span>GSS Award for Excellence in Graduate Research</span><span class="date">May 2024</span></li>
+          <li><span>First Author Award, Bredesen Center</span><span class="date">May 2024</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:.95rem; margin-bottom:6px">Conference Presentations</h3>
+        <ul class="linelist">
+          <li><span><strong>Invited oral talk</strong> — Gordon Research Seminar, Newry, ME</span><span class="date">Jul 2026</span></li>
+          <li><span>Poster — Gordon Research Conference, Newry, ME</span><span class="date">Jul 2026</span></li>
+          <li><span>Talk — ACS Spring Meeting, Atlanta, GA</span><span class="date">Mar 2026</span></li>
+          <li><span>Talk — Radiation Research Society Annual Meeting, Puerto Rico</span><span class="date">Sep 2025</span></li>
+        </ul>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills"><div class="wrap reveal">
+    <p class="sec-title">Technical Skills</p>
+    <dl style="margin:0">
+      <div class="skillrow">
+        <dt>Genomics &amp; Epigenomics</dt>
+        <dd>
+          <span class="chip">CUT&amp;RUN</span><span class="chip">RNA-seq</span><span class="chip">Hi-C</span>
+          <span class="chip">qRT-PCR</span><span class="chip">UCSC Genome Browser</span><span class="chip">STRING</span>
+        </dd>
+      </div>
+      <div class="skillrow">
+        <dt>Computational</dt>
+        <dd>
+          <span class="chip">Python</span><span class="chip">R</span><span class="chip">DESeq2</span>
+          <span class="chip">deepTools</span><span class="chip">Bowtie2</span><span class="chip">HPC / ISAAC-NG</span>
+          <span class="chip">AutoDock</span><span class="chip">PyMOL</span><span class="chip">GraphPad Prism</span><span class="chip">ImageJ</span>
+        </dd>
+      </div>
+      <div class="skillrow">
+        <dt>Molecular &amp; Cell Biology</dt>
+        <dd>
+          <span class="chip">Mammalian cell culture</span><span class="chip">GMP cell culture</span>
+          <span class="chip">SDS-PAGE / Western blot</span><span class="chip">ELISA</span>
+          <span class="chip">IHC / ICC</span><span class="chip">Flow cytometry</span><span class="chip">Molecular cloning</span>
+        </dd>
+      </div>
+      <div class="skillrow">
+        <dt>Imaging &amp; In Vivo</dt>
+        <dd>
+          <span class="chip">Confocal microscopy</span><span class="chip">SEM</span>
+          <span class="chip">Mouse &amp; rabbit handling</span><span class="chip">PLGA nanoparticle synthesis</span>
+          <span class="chip">Theranostics</span><span class="chip">Radioisotope handling (Cs-137, Ac-225)</span>
+        </dd>
+      </div>
+      <div class="skillrow">
+        <dt>Compliance</dt>
+        <dd>
+          <span class="chip">BSL-2</span><span class="chip">OSHA</span><span class="chip">NIH guidelines</span>
+          <span class="chip">cGMP</span><span class="chip">Clinical trial support</span>
+        </dd>
+      </div>
+    </dl>
+  </div></section>
+
+  <!-- ================= EDUCATION + SERVICE ================= -->
+  <section id="education"><div class="wrap reveal">
+    <p class="sec-title">Education</p>
+    <div class="edu">
+      <div>
+        <div class="deg">M.S., Genome Science and Technology</div>
+        <div class="sch">University of Tennessee / Oak Ridge National Laboratory — Bredesen Center · Knoxville, TN</div>
+      </div>
+      <div class="yr">Dec 2026</div>
+    </div>
+    <div class="edu">
+      <div>
+        <div class="deg">M.S., Biochemistry and Molecular Biology</div>
+        <div class="sch">Pondicherry University · India</div>
+      </div>
+      <div class="yr">Nov 2020</div>
+    </div>
+    <div class="edu">
+      <div>
+        <div class="deg">B.S., Zoology</div>
+        <div class="sch">Utkal University · India</div>
+      </div>
+      <div class="yr">May 2018</div>
+    </div>
+
+    <p class="sec-title" style="margin-top:36px">Leadership &amp; Service</p>
+    <ul class="linelist">
+      <li><span>Vice President, Indian Student Association at UTK</span><span class="date">Jul 2026 – Present</span></li>
+      <li><span>President, Indian Student Association at UTK</span><span class="date">Jul 2025 – Jun 2026</span></li>
+      <li><span>Chair, International Student Support Committee, UTK Graduate Student Senate</span><span class="date">Jul 2025 – May 2026</span></li>
+      <li><span>Secretary, Indian Student Association at UTK</span><span class="date">Jul 2024 – Jun 2025</span></li>
+    </ul>
+  </div></section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact"><div class="wrap reveal">
+    <p class="sec-title">Contact</p>
+    <div class="contact-box">
+      <h3 style="font-size:1.15rem; margin-bottom:8px">Let's talk science.</h3>
+      <p class="prose" style="margin-bottom:18px">
+        I'm currently seeking roles in biotechnology, cell &amp; gene therapy, radiopharmaceutical
+        development, and translational molecular biology, starting December 2026. Happy to discuss
+        collaborations, radiation biology, or anything chromatin-related.
+      </p>
+      <div class="cta-row" style="margin-top:0">
+        <a class="btn primary" href="mailto:abhisheksahoo532@gmail.com">abhisheksahoo532@gmail.com</a>
+        <a class="btn" href="tel:+18652836974">865-283-6974</a>
+        <a class="btn" href="resume.pdf">Download CV</a>
+      </div>
+    </div>
+  </div></section>
+
+</main>
+
+<footer><div class="wrap">
+  <div class="social">
+    <a href="https://scholar.google.com/">Google Scholar</a>
+    <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a>
+    <a href="https://orcid.org/0000-0000-0000-0000">ORCID</a>
+    <a href="mailto:abhisheksahoo532@gmail.com">Email</a>
+  </div>
+  <div>© <span id="yr"></span> Abhishek Sahoo · Knoxville, TN · Built as a single static HTML file.</div>
+</div></footer>
+
+<script>
+// ---- Theme toggle with system default + localStorage persistence ----
+(function(){
+  var root = document.documentElement;
+  var saved = localStorage.getItem('theme');
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  root.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+  document.getElementById('themeBtn').addEventListener('click', function(){
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+})();
+
+// ---- Year ----
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// ---- Scroll reveal ----
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+
+<!-- Structured data: helps Google show you correctly when recruiters search your name -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Abhishek Sahoo",
+  "email":"mailto:abhisheksahoo532@gmail.com",
+  "jobTitle":"Graduate Research Assistant",
+  "affiliation":{"@type":"Organization","name":"UT-ORNL Bredesen Center, University of Tennessee"},
+  "alumniOf":["Pondicherry University","Utkal University"],
+  "address":{"@type":"PostalAddress","addressLocality":"Knoxville","addressRegion":"TN","addressCountry":"USA"},
+  "knowsAbout":["Radiation Biology","Epigenomics","CUT&RUN","Mesenchymal Stem Cells","Targeted Alpha Therapy","Nanomedicine"],
+  "url":"https://abhisheksahoo.com"
+}
+</script>
+
+</body>
+</html>
